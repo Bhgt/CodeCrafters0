@@ -5,7 +5,31 @@
 	</head>
 	<body>
 		<div class="container">
-			<h3>Posts</h3>
+			<h3>Post</h3>
+			<%= typeof msg != 'undefined' ? msg : '' %>
+			<form action="/upload" method="POST" enctype="multipart/form-data">
+				<input type="text" name="myName">
+				<div class="file-field input-field">
+					<div class="btn">
+						<span>File</span>
+						<input name="myImage" type="file">
+					</div>
+					<div class="file-path-wrapper">
+						<input class="file-path validate" type="text">
+					</div>
+				</div>
+				<button type="submit" class="btn">Upload</button>
+			</form>
+			<div class="row">
+				<div class="col">
+					<div class="card <%= typeof title == 'undefined' ? 'z-depth-0' : '' %>">
+						<div class="card-content">
+							<div class="card-title"><%= typeof title != 'undefined' ? title : '' %></div>
+							<img src="<%= typeof file != 'undefined' ? file : '' %>" class="responsive-img"/>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		
 		<script
