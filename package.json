@@ -1,0 +1,25 @@
+{
+  "name": "codecrafters0",
+  "version": "1.0.0",
+  "description": "Project submission for Technovation Hackathon",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bhgt/CodeCrafters0.git"
+  },
+  "author": "Bhgt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bhgt/CodeCrafters0/issues"
+  },
+  "homepage": "https://github.com/Bhgt/CodeCrafters0#readme",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  }
+}
