@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<style>
+			a, a:visited {
+			color: #ffd000;
+			text-decoration: none;
+			}
+			a:hover, a:active, a:focus {
+			color: #444;
+			outline: none;
+			text-decoration: none;
+			}
+
+			p {
+			margin-bottom: 30px;
+			}
+
+			h1, h2, h3, h4, h5, h6, figure {
+			color: #fff;
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			font-weight: 400;
+			background-color: #ffd000;
+			margin: 0 0 20px 0;
+			}
+		</style>	
+	</head>
+	<body>
+		<%- include('partials/nav.ejs'); %>
+		<h1>Posts</h1>
+		<ul>
+		<% posts.forEach(function(item){ %>
+			<li><a href= " <%= item %> "</a> <%= item%> </a></li>
+		<% }); %>
+		</ul>
+	</body>
+</html>
