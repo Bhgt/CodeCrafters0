@@ -23,10 +23,12 @@ var posts = [];
 
 app.set('view engine', 'ejs');
 
-app.use(express.static('./public'));
+app.use(express.static('./'));
 //app.use(express.urlencoded());
 
-app.get('/', (req, res) => res.render('index', {posts: posts}));
+app.get('/', (req, res) => res.sendFile(__dirname+'/index.html'));
+
+app.get('/post', (req, res) => res.render('index', {posts: posts}));
 
 app.post('/upload', (req, res) => {
 	upload(req, res, (err) => {
